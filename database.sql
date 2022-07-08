@@ -6,7 +6,6 @@ CREATE TABLE usuarios( Id int not null primary key auto_increment, Nombre varcha
 
 CREATE TABLE eventos( Id int not null primary key auto_increment, Nombre varchar(50) not null, Inicio datetime, Fin char(1), IdUsuarioResposable int, INDEX fk_eventos_id (Id));
 
-CREATE TABLE registros( Id int NOT NULL AUTO_INCREMENT, IdEvento int not null, IdUsuario int not null, IdTipoUsuario int not null, FechaRegistro datetime, IdEstatu int not null, PRIMARY KEY (Id), FOREIGN KEY (IdUsuario) REFERENCES usuarios(Id), FOREIGN KEY (IdEvento) REFERENCES eventos(Id) );
 
 INSERT INTO `usuarios`(`Nombre`, `Apellidos`, `Sexo`, `Correo`, `password`, `Telefono`, `IdEstatu`, `EsAdmin`) VALUES ('superadministrador','prueba','M','admin@mail.com','p2','1234567',1,TRUE);
 
