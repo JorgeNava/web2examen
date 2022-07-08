@@ -1,7 +1,7 @@
 <?php
 
 function verUsuariosRegistrados(){
-    $conn = mysqli_connect("localhost","root","","app02");
+    $conn = mysqli_connect("localhost","root","","js22_w2_p2");
     $str = "";
     if($conn){
         $q = " SELECT * "
